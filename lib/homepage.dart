@@ -74,69 +74,88 @@ class HomePage extends StatelessWidget {
       //     color: const Color.fromARGB(255, 7, 150, 163),
       //   ),
       // ), //commented cz ek homepage e duita body thakte parbe na
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center, //eita alignment set kore. eikhane alignment ekdom right theke ashbe
-          //mainAxisAlignment: MainAxisAlignment.center, //eita alignment set kore. eikhane alignment ekdom center e thakbe
-          //check out other options as well
-          crossAxisAlignment:
-              CrossAxisAlignment.center, //x axis borabor align kore
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextButton(
-                onPressed: () {},
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
-                  foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-                  fixedSize: Size(300, 105),
-                  side: BorderSide(),
-                  elevation: 50,
-                ),
-                child: Text(
-                  "Chaile eikhane icon ba nijer icchamoto jinish add kora jabe widget, icon, text anything",
-                ),
-              ),
-            ),
-
-            SizedBox(
-              width: 25,
-            ), //another 25 gaps between textbutton and elevated button
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                onPressed: () {},
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
-                  foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-                  fixedSize: Size(300, 65),
-                  side: BorderSide(),
-                  //elevation: 50, //3d effect dey
-                ),
-                child: Text(
-                  "Chaile eikhane icon ba nijer icchamoto jinish add kora jabe widget, icon, text anything",
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center, //eita alignment set kore. eikhane alignment ekdom right theke ashbe
+            //mainAxisAlignment: MainAxisAlignment.center, //eita alignment set kore. eikhane alignment ekdom center e thakbe
+            //check out other options as well
+            crossAxisAlignment:
+                CrossAxisAlignment.center, //x axis borabor align kore
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.deepPurple,
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    fixedSize: Size(300, 105),
+                    side: BorderSide(),
+                    elevation: 50,
+                  ),
+                  child: Text(
+                    "Chaile eikhane icon ba nijer icchamoto jinish add kora jabe widget, icon, text anything",
+                  ),
                 ),
               ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: IconButton(
-                onPressed: () {},
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
-                  foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-                  fixedSize: Size(100, 25),
-                  side: BorderSide(),
-                  elevation: 50,
+                    
+              SizedBox(
+                width: 25,
+              ), //another 25 gaps between textbutton and elevated button
+                    
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.deepPurple,
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    fixedSize: Size(300, 65),
+                    side: BorderSide(),
+                    //elevation: 50, //3d effect dey
+                  ),
+                  child: Text(
+                    "Chaile eikhane icon ba nijer icchamoto jinish add kora jabe widget, icon, text anything",
+                  ),
                 ),
-                icon: Icon(Icons.animation),
               ),
-            ),
-          ],
-        ),
+                    
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: IconButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.deepPurple,
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    fixedSize: Size(100, 25),
+                    side: BorderSide(),
+                    elevation: 50,
+                  ),
+                  icon: Icon(Icons.animation),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            height: 200,
+            width: 200,
+            padding: EdgeInsets.all(20),
+            margin: EdgeInsets.all(30),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 208, 133, 221),
+              border: Border.all(width: 5, color: Colors.blue),
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              //shape: BoxShape.circle,
+              gradient: RadialGradient(colors:  [
+                Colors.purpleAccent,
+                Colors.purple,
+              ])
+              ),
+            child: Text("Hello Containter", style: TextStyle(color: Colors.white)), 
+          )
+        ],
       ),
 
       floatingActionButton: FloatingActionButton(
