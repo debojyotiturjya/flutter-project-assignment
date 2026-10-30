@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:class_project_001/calculator_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -126,11 +127,40 @@ class HomePage extends StatelessWidget {
                         ),
                         fixedSize: Size(300, 65),
                         side: BorderSide(),
+
+                        
                         //elevation: 50, //3d effect dey
                       ),
                       child: Text(
                         "Chaile eikhane icon ba nijer icchamoto jinish add kora jabe widget, icon, text anything",
                       ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CalculatorPage(),
+                          ),
+                        );
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.deepPurple,
+                        foregroundColor: const Color.fromARGB(
+                          255,
+                          255,
+                          255,
+                          255,
+                        ),
+                        fixedSize: Size(300, 65),
+                        side: BorderSide(),
+                        //elevation: 50, //3d effect dey
+                      ),
+                      child: Text("Calculator"),
                     ),
                   ),
 
